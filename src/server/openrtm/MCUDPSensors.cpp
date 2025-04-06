@@ -250,8 +250,10 @@ RTC::ReturnCode_t MCUDPSensors::onExecute(RTC::UniqueId ec_id)
     }
     auto chrono_tm = std::chrono::steady_clock::now();
     RTC::Time tm;
-    tm.sec = static_cast<CORBA::ULong>(std::chrono::duration_cast<std::chrono::seconds>(chrono_tm.time_since_epoch()).count());
-    tm.nsec = static_cast<CORBA::ULong>(std::chrono::duration_cast<std::chrono::nanoseconds>(chrono_tm.time_since_epoch()).count());
+    tm.sec = static_cast<CORBA::ULong>(
+        std::chrono::duration_cast<std::chrono::seconds>(chrono_tm.time_since_epoch()).count());
+    tm.nsec = static_cast<CORBA::ULong>(
+        std::chrono::duration_cast<std::chrono::nanoseconds>(chrono_tm.time_since_epoch()).count());
     if(m_enabled)
     {
       compute_start = std::chrono::system_clock::now();
