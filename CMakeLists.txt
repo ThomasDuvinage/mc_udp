@@ -2,7 +2,7 @@
 # Copyright 2019-2020 CNRS-UM LIRMM, CNRS-AIST JRL
 #
 
-cmake_minimum_required(VERSION 3.5) # Minimum required by recent mc_rtc
+cmake_minimum_required(VERSION 3.10)
 
 project(mc_udp LANGUAGES CXX VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 11)
